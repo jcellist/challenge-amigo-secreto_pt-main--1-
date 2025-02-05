@@ -11,6 +11,8 @@ function adicionarAmigo() {
     amigos.push(nomeAmigo); 
     console.log(amigos);
     limparCampo();
+    atualizarListaDeAmigos()
+
  }
  function limparCampo(){
     nomeAmigo = document.getElementById('amigo');
@@ -34,4 +36,6 @@ function sortearAmigo() {
     let indiceAleatorio = Math.floor(Math.random() * amigos.length);
     let amigoSorteado = amigos[indiceAleatorio];
     resultado.innerHTML =`Amigo sorteado:${amigoSorteado}`;
+    
+    atualizarListaDeAmigos()
 }
